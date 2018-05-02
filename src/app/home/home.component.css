@@ -1,0 +1,20 @@
+select{
+    background-color: black;
+}
+
+.red{
+
+    border: 3px solid red;
+    border-color: red;
+    
+}
+
+.blue{
+    border: 3px solid blue;
+    border-color:blue;
+}
+
+.green{
+    border: 3px solid green;
+    border-color:green;
+}

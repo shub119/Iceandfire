@@ -1,0 +1,55 @@
+<br>
+<div class="container">
+  <div class="row">
+
+  </div>
+  <br>
+  <div class="row" *ngIf="allData.length>0">
+    <div class="col-md-4" *ngFor="let data of allData">
+      <div class="col-md-12" *ngIf="data.isbn">
+        <div class="card" class="red">
+          <img class="card-img-top" src="assets/book.png" height="180px" width="326px" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Book Name: {{data.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Category:- Books</h6>
+            <a [routerLink]="['/books',data.url.split('/').pop()]" class="btn btn-success">Know More..</a>
+            <p class="card-text"></p>
+          </div>
+        </div>
+        <br>
+        <br>
+      </div>
+      <div class="col-md-12" *ngIf="data.region || data.coatOfArms">
+        <div class="card" class="green">
+          <img class="card-img-top" src="assets/house.jpg" height="180px" width="326px" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">House Name: {{data.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Category:- House</h6>
+            <a [routerLink]="['/houses',data.url.split('/').pop()]" class="btn btn-success">Know More..</a>
+            <p class="card-text"></p>
+          </div>
+        </div>
+        <br>
+        <br>
+      </div>
+      <div class="col-md-12" *ngIf="data.gender">
+        <div class="card" class="blue">
+          <img class="card-img-top" src="assets/char.png" height="180px" width="326px" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Character Name:
+              <span *ngIf="data.name; then ifblock else elseblock"></span>
+              <ng-template #ifblock>{{data.name}}</ng-template>
+              <ng-template #elseblock>Not Available</ng-template>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">Category:- Character</h6>
+            <a [routerLink]="['/characters',data.url.split('/').pop()]" class="btn btn-success">Know More..</a>
+            <p class="card-text"></p>
+
+          </div>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.header{
+    background-color: yellow;
+    display: block;
+    padding: 3%;
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.navbar-nav{
+    font-weight: bold;
+    
+}
+
+.row{
+    background-color:black
+}
+
+.lead{
+    background: black;
+}
+
+.jumbotron{
+    color: yellow;
+    background-color:black;
+}
+
+.container{
+    background-color: black; 
+}
